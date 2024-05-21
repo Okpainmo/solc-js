@@ -1,13 +1,13 @@
 {
   "name": "solc",
-  "version": "0.8.25",
+  "version": "0.8.26",
   "description": "Solidity compiler",
   "main": "index.js",
   "bin": {
     "solcjs": "solc.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "node api.js && tsc",
     "postbuild": "node build/postbuild.js && cp README.md LICENSE dist/",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "eslint --fix --ext .js,.ts .",
